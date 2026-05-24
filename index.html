@@ -1,0 +1,125 @@
+---
+layout: default
+title: About
+---
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>
+      <span data-en>{{ site.author.name }}</span>
+      <span data-zh>{{ site.author.name_zh }}</span>
+    </h1>
+    <p class="tagline">
+      <span data-en>{{ site.tagline }}</span>
+      <span data-zh>{{ site.tagline_zh }}</span>
+    </p>
+
+    <!-- ============================================================
+         个人简介 / Biography  —  在这里编辑你的自我介绍
+         ============================================================ -->
+    <div data-en>
+      <p>
+        Hi! I am <strong>{{ site.author.name }}</strong>, currently a Ph.D. student at
+        <em>{{ site.author.affiliation }}</em>. My research focuses on
+        <strong>[your research area]</strong> — I am interested in
+        <em>[topic A]</em>, <em>[topic B]</em>, and how they can be combined to
+        solve <em>[a real problem]</em>.
+      </p>
+      <p>
+        Before that, I obtained my B.Sc. degree from <em>[Undergraduate University]</em>.
+        I enjoy turning messy real-world questions into clean mathematical formulations,
+        and I am always happy to chat about research, side projects, or photography.
+      </p>
+      <p>
+        Feel free to reach me at
+        <a href="mailto:{{ site.author.email }}"><code>{{ site.author.email }}</code></a>.
+      </p>
+    </div>
+    <div data-zh>
+      <p>
+        你好！我是 <strong>{{ site.author.name_zh }}</strong>，目前是
+        <em>{{ site.author.affiliation_zh }}</em> 的博士研究生。
+        我的研究方向是 <strong>[你的研究方向]</strong>，对
+        <em>[方向 A]</em>、<em>[方向 B]</em>
+        以及如何用它们解决 <em>[某类实际问题]</em> 充满兴趣。
+      </p>
+      <p>
+        本科毕业于 <em>[本科学校]</em>。
+        我喜欢把现实中混乱的问题抽象成简洁的数学模型，欢迎与我交流学术、项目或摄影。
+      </p>
+      <p>
+        联系邮箱：
+        <a href="mailto:{{ site.author.email }}"><code>{{ site.author.email }}</code></a>。
+      </p>
+    </div>
+  </div>
+
+  <aside>
+    <!-- 把头像图片放到 /assets/img/profile.jpg；若暂无图片会显示占位图标 -->
+    {% capture has_photo %}{{ site.author.photo | default: '' }}{% endcapture %}
+    <div class="hero-photo {% if has_photo == '' %}placeholder{% endif %}"
+         {% if has_photo != '' %}style="background-image:url('{{ site.author.photo | relative_url }}')"{% endif %}>
+      {% if has_photo == '' %}<i class="fa-regular fa-user"></i>{% endif %}
+    </div>
+    <div class="hero-contact">
+      <div><i class="fa-solid fa-building-columns"></i>
+        <span data-en>{{ site.author.affiliation }}</span>
+        <span data-zh>{{ site.author.affiliation_zh }}</span>
+      </div>
+      {% if site.author.office %}
+      <div><i class="fa-solid fa-location-dot"></i>
+        <span data-en>{{ site.author.office }}</span>
+        <span data-zh>{{ site.author.office_zh }}</span>
+      </div>
+      {% endif %}
+      <div><i class="fa-regular fa-envelope"></i>
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<!-- ============================================================
+     News / 最近动态
+     ============================================================ -->
+<h2><span data-en>News</span><span data-zh>最近动态</span></h2>
+<ul class="news-list">
+  <li>
+    <span class="news-date">2025.03</span>
+    <span>
+      <span data-en>One paper accepted to <em>XXX 2025</em> (Oral)!</span>
+      <span data-zh>一篇论文被 <em>XXX 2025</em> 接收（Oral）！</span>
+    </span>
+  </li>
+  <li>
+    <span class="news-date">2024.11</span>
+    <span>
+      <span data-en>Received the National Scholarship.</span>
+      <span data-zh>获得国家奖学金。</span>
+    </span>
+  </li>
+  <li>
+    <span class="news-date">2024.06</span>
+    <span>
+      <span data-en>Started a research internship at XXX Lab.</span>
+      <span data-zh>在 XXX 研究院开始科研实习。</span>
+    </span>
+  </li>
+</ul>
+
+<!-- ============================================================
+     Selected Publications  —  自动选取前 3 篇
+     ============================================================ -->
+<h2><span data-en>Selected Publications</span><span data-zh>代表性论文</span></h2>
+<ul class="pub-list">
+  {% assign selected = site.data.publications | slice: 0, 3 %}
+  {% for pub in selected %}
+    {% include publication.html pub=pub %}
+  {% endfor %}
+</ul>
+<p>
+  <a href="{{ '/publications/' | relative_url }}">
+    <span data-en>See all publications →</span>
+    <span data-zh>查看全部论文 →</span>
+  </a>
+</p>

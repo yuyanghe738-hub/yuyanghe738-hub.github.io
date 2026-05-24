@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-social">
+      {% if site.social.github %}
+        <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      {% endif %}
+      {% if site.social.scholar %}
+        <a href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+      {% endif %}
+      {% if site.social.orcid %}
+        <a href="https://orcid.org/{{ site.social.orcid }}" target="_blank" rel="noopener" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>
+      {% endif %}
+      {% if site.social.linkedin %}
+        <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      {% endif %}
+      {% if site.social.twitter %}
+        <a href="https://twitter.com/{{ site.social.twitter }}" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      {% endif %}
+      {% if site.social.zhihu %}
+        <a href="https://www.zhihu.com/people/{{ site.social.zhihu }}" target="_blank" rel="noopener" aria-label="Zhihu"><i class="fa-brands fa-zhihu"></i></a>
+      {% endif %}
+      {% if site.author.email %}
+        <a href="mailto:{{ site.author.email }}" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      {% endif %}
+    </div>
+    <p class="footer-copy">
+      <span data-en>&copy; {{ 'now' | date: '%Y' }} {{ site.author.name }}. Built with Jekyll.</span>
+      <span data-zh>&copy; {{ 'now' | date: '%Y' }} {{ site.author.name_zh }}. 基于 Jekyll 构建。</span>
+    </p>
+  </div>
+</footer>
