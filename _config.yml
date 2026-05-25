@@ -2,15 +2,15 @@
 #  Site Settings  —  edit your info here
 # =====================================================================
 
-title:        "Your Name"
-description:  "Academic homepage of Your Name."
+title:        "Yuyang He"
+description:  "Academic homepage of Yuyang He."
 url:          ""
 baseurl:      ""
 
 # Profile
 author:
-  name:        "Your Name"
-  email:       "your.email@example.com"
+  name:        "Yuyang he"
+  email:       "yuyanghe738@gmail.com"
   role:        "Undergraduate Student, Department of XXX"
   affiliation: "University of YYY · Honors Program"
 
