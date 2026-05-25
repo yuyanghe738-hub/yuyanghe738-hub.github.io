@@ -75,12 +75,9 @@
     const tick = () => {
       x += (targetX - x) * ease;
       y += (targetY - y) * ease;
-      // small bobbing — sine wave on time, ~2 px amplitude
       const bob = Math.sin(performance.now() / 280) * 2;
-      // flip pikachu horizontally based on movement direction
-      const dir = targetX < x - 0.3 ? -1 : 1;
       pet.style.transform =
-        `translate3d(${(x - size / 2).toFixed(1)}px, ${(y - size / 2 + bob).toFixed(1)}px, 0) scaleX(${dir})`;
+        `translate3d(${(x - size / 2).toFixed(1)}px, ${(y - size / 2 + bob).toFixed(1)}px, 0)`;
       requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
