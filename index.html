@@ -217,9 +217,11 @@ layout: default
        ========================================================= -->
   {% if site.quote.text %}
   <aside class="quote">
-    <span class="quote-mark quote-mark-open" aria-hidden="true">&ldquo;</span>
-    <p class="quote-text">{{ site.quote.text }}</p>
-    <span class="quote-mark quote-mark-close" aria-hidden="true">&rdquo;</span>
+    <div class="quote-body">
+      <span class="quote-mark quote-mark-open" aria-hidden="true">&ldquo;</span>
+      <p class="quote-text">{{ site.quote.text }}</p>
+      <span class="quote-mark quote-mark-close" aria-hidden="true">&rdquo;</span>
+    </div>
     {% if site.quote.source %}<span class="quote-source">{{ site.quote.source }}</span>{% endif %}
     {% if site.quote.work %}<span class="quote-work">{{ site.quote.work }}</span>{% endif %}
   </aside>
