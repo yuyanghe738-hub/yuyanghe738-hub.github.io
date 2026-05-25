@@ -405,10 +405,11 @@ main { padding-bottom: 3rem; }
   font-family: var(--font-serif);
   font-style: normal;
   font-size: 3rem;
-  line-height: 0.4;
+  line-height: 1;
   color: var(--muted-2);
   display: block;
-  margin-top: 0.35em;
+  margin-top: -0.35em;
+  margin-bottom: -0.55em;
 }
 .quote-source {
   display: block;
