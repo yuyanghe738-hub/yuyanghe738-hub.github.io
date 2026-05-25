@@ -64,9 +64,12 @@ layout: default
     <h2><span data-en>About</span><span data-zh>关于我</span></h2>
     <div class="about-block">
       {% capture has_photo %}{{ site.author.photo | default: '' }}{% endcapture %}
-      <div class="about-photo"
-           {% if has_photo != '' %}style="background-image:url('{{ site.author.photo | relative_url }}')"{% endif %}>
-        {% if has_photo == '' %}<span class="placeholder-emoji" title="把你的皮卡丘 PNG 放到 assets/img/profile.jpg 就会替换这里">⚡</span>{% endif %}
+      <div class="about-photo {% if has_photo != '' %}with-photo{% endif %}">
+        {% if has_photo != '' %}
+          <img src="{{ site.author.photo | relative_url }}" alt="{{ site.author.name }}" />
+        {% else %}
+          <span class="placeholder-emoji" title="把你的皮卡丘 PNG 放到 assets/img/ 即可">⚡</span>
+        {% endif %}
       </div>
 
       <div data-en>
@@ -115,6 +118,13 @@ layout: default
         </span>
       </li>
       <li>
+        <span class="news-date">2025.01</span>
+        <span>
+          <span data-en>Submitted a new manuscript to <em>YYY 2025</em>.</span>
+          <span data-zh>向 <em>YYY 2025</em> 投出一篇新稿。</span>
+        </span>
+      </li>
+      <li>
         <span class="news-date">2024.11</span>
         <span>
           <span data-en>Received the National Scholarship.</span>
@@ -122,10 +132,31 @@ layout: default
         </span>
       </li>
       <li>
+        <span class="news-date">2024.09</span>
+        <span>
+          <span data-en>Returned from internship; started a new collaboration on agent systems.</span>
+          <span data-zh>结束实习返校，开启关于 agent 系统的新合作课题。</span>
+        </span>
+      </li>
+      <li>
         <span class="news-date">2024.06</span>
         <span>
           <span data-en>Started a research internship at XXX Lab.</span>
           <span data-zh>在 XXX 研究院开始科研实习。</span>
+        </span>
+      </li>
+      <li>
+        <span class="news-date">2024.03</span>
+        <span>
+          <span data-en>Gave a short talk at the department seminar.</span>
+          <span data-zh>在院系组会做一次小报告。</span>
+        </span>
+      </li>
+      <li>
+        <span class="news-date">2023.09</span>
+        <span>
+          <span data-en>Started Ph.D. studies at <em>{{ site.author.affiliation }}</em>.</span>
+          <span data-zh>开始在 <em>{{ site.author.affiliation_zh }}</em> 攻读博士。</span>
         </span>
       </li>
     </ul>
