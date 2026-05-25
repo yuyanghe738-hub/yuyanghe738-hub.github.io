@@ -1,125 +1,301 @@
 ---
 layout: default
-title: About
 ---
 
-<section class="hero">
-  <div class="hero-text">
+<article class="container">
+
+  <!-- =========================================================
+       HERO — name, role, link row
+       ========================================================= -->
+  <header class="hero">
     <h1>
       <span data-en>{{ site.author.name }}</span>
       <span data-zh>{{ site.author.name_zh }}</span>
     </h1>
-    <p class="tagline">
-      <span data-en>{{ site.tagline }}</span>
-      <span data-zh>{{ site.tagline_zh }}</span>
-    </p>
-
-    <!-- ============================================================
-         个人简介 / Biography  —  在这里编辑你的自我介绍
-         ============================================================ -->
-    <div data-en>
-      <p>
-        Hi! I am <strong>{{ site.author.name }}</strong>, currently a Ph.D. student at
-        <em>{{ site.author.affiliation }}</em>. My research focuses on
-        <strong>[your research area]</strong> — I am interested in
-        <em>[topic A]</em>, <em>[topic B]</em>, and how they can be combined to
-        solve <em>[a real problem]</em>.
-      </p>
-      <p>
-        Before that, I obtained my B.Sc. degree from <em>[Undergraduate University]</em>.
-        I enjoy turning messy real-world questions into clean mathematical formulations,
-        and I am always happy to chat about research, side projects, or photography.
-      </p>
-      <p>
-        Feel free to reach me at
-        <a href="mailto:{{ site.author.email }}"><code>{{ site.author.email }}</code></a>.
-      </p>
-    </div>
-    <div data-zh>
-      <p>
-        你好！我是 <strong>{{ site.author.name_zh }}</strong>，目前是
-        <em>{{ site.author.affiliation_zh }}</em> 的博士研究生。
-        我的研究方向是 <strong>[你的研究方向]</strong>，对
-        <em>[方向 A]</em>、<em>[方向 B]</em>
-        以及如何用它们解决 <em>[某类实际问题]</em> 充满兴趣。
-      </p>
-      <p>
-        本科毕业于 <em>[本科学校]</em>。
-        我喜欢把现实中混乱的问题抽象成简洁的数学模型，欢迎与我交流学术、项目或摄影。
-      </p>
-      <p>
-        联系邮箱：
-        <a href="mailto:{{ site.author.email }}"><code>{{ site.author.email }}</code></a>。
-      </p>
-    </div>
-  </div>
-
-  <aside>
-    <!-- 把头像图片放到 /assets/img/profile.jpg；若暂无图片会显示占位图标 -->
-    {% capture has_photo %}{{ site.author.photo | default: '' }}{% endcapture %}
-    <div class="hero-photo {% if has_photo == '' %}placeholder{% endif %}"
-         {% if has_photo != '' %}style="background-image:url('{{ site.author.photo | relative_url }}')"{% endif %}>
-      {% if has_photo == '' %}<i class="fa-regular fa-user"></i>{% endif %}
-    </div>
-    <div class="hero-contact">
-      <div><i class="fa-solid fa-building-columns"></i>
+    <p class="role-lines">
+      <span class="role-line">
+        <span data-en>{{ site.author.role }}</span>
+        <span data-zh>{{ site.author.role_zh }}</span>
+      </span>
+      <span class="role-line">
         <span data-en>{{ site.author.affiliation }}</span>
         <span data-zh>{{ site.author.affiliation_zh }}</span>
-      </div>
-      {% if site.author.office %}
-      <div><i class="fa-solid fa-location-dot"></i>
-        <span data-en>{{ site.author.office }}</span>
-        <span data-zh>{{ site.author.office_zh }}</span>
-      </div>
+      </span>
+    </p>
+    <p class="link-row">
+      {% assign first = true %}
+      {% if site.links.email %}
+        {% unless first %}<span class="sep">|</span>{% endunless %}
+        <a href="mailto:{{ site.links.email }}">Email</a>
+        {% assign first = false %}
       {% endif %}
-      <div><i class="fa-regular fa-envelope"></i>
-        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+      {% if site.links.scholar %}
+        {% unless first %}<span class="sep">|</span>{% endunless %}
+        <a href="{{ site.links.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+        {% assign first = false %}
+      {% endif %}
+      {% if site.links.github %}
+        {% unless first %}<span class="sep">|</span>{% endunless %}
+        <a href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub</a>
+        {% assign first = false %}
+      {% endif %}
+      {% if site.links.website %}
+        {% unless first %}<span class="sep">|</span>{% endunless %}
+        <a href="{{ site.links.website }}" target="_blank" rel="noopener">Website</a>
+        {% assign first = false %}
+      {% endif %}
+      {% if site.links.arxiv %}
+        {% unless first %}<span class="sep">|</span>{% endunless %}
+        <a href="{{ site.links.arxiv }}" target="_blank" rel="noopener">arXiv</a>
+        {% assign first = false %}
+      {% endif %}
+      {% if site.links.cv %}
+        {% unless first %}<span class="sep">|</span>{% endunless %}
+        <a href="{{ site.links.cv }}" target="_blank" rel="noopener">CV (PDF)</a>
+        {% assign first = false %}
+      {% endif %}
+    </p>
+  </header>
+
+  <!-- =========================================================
+       ABOUT
+       ========================================================= -->
+  <section id="about">
+    <h2><span data-en>About</span><span data-zh>关于我</span></h2>
+    <div class="about-block">
+      {% capture has_photo %}{{ site.author.photo | default: '' }}{% endcapture %}
+      <div class="about-photo"
+           {% if has_photo != '' %}style="background-image:url('{{ site.author.photo | relative_url }}')"{% endif %}>
+        {% if has_photo == '' %}<span>photo</span>{% endif %}
+      </div>
+
+      <div data-en>
+        <p>
+          Hi! I am <strong>{{ site.author.name }}</strong>, a student at
+          <em>{{ site.author.affiliation }}</em>. My research focuses on
+          <strong>[your research area]</strong> &mdash; I am interested in
+          <em>[topic A]</em>, <em>[topic B]</em>, and how they can be combined to
+          tackle <em>[a real-world problem]</em>.
+        </p>
+        <p>
+          I enjoy turning messy real-world questions into clean mathematical
+          formulations, and I am always happy to chat about research, side
+          projects, or photography. Feel free to reach me at
+          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
+        </p>
+      </div>
+      <div data-zh>
+        <p>
+          你好！我是 <strong>{{ site.author.name_zh }}</strong>，目前就读于
+          <em>{{ site.author.affiliation_zh }}</em>。研究方向是
+          <strong>[你的研究方向]</strong>，对
+          <em>[方向 A]</em>、<em>[方向 B]</em>
+          以及它们如何解决 <em>[某类实际问题]</em> 颇感兴趣。
+        </p>
+        <p>
+          我喜欢把现实中混乱的问题抽象成简洁的数学模型。
+          欢迎通过邮件与我交流：
+          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>。
+        </p>
       </div>
     </div>
-  </aside>
-</section>
+  </section>
 
-<!-- ============================================================
-     News / 最近动态
-     ============================================================ -->
-<h2><span data-en>News</span><span data-zh>最近动态</span></h2>
-<ul class="news-list">
-  <li>
-    <span class="news-date">2025.03</span>
-    <span>
-      <span data-en>One paper accepted to <em>XXX 2025</em> (Oral)!</span>
-      <span data-zh>一篇论文被 <em>XXX 2025</em> 接收（Oral）！</span>
-    </span>
-  </li>
-  <li>
-    <span class="news-date">2024.11</span>
-    <span>
-      <span data-en>Received the National Scholarship.</span>
-      <span data-zh>获得国家奖学金。</span>
-    </span>
-  </li>
-  <li>
-    <span class="news-date">2024.06</span>
-    <span>
-      <span data-en>Started a research internship at XXX Lab.</span>
-      <span data-zh>在 XXX 研究院开始科研实习。</span>
-    </span>
-  </li>
-</ul>
+  <!-- =========================================================
+       NEWS
+       ========================================================= -->
+  <section id="news">
+    <h2><span data-en>News</span><span data-zh>最近动态</span></h2>
+    <ul class="news-list">
+      <li>
+        <span class="news-date">2025.03</span>
+        <span>
+          <span data-en>One paper accepted to <em>XXX 2025</em> (Oral).</span>
+          <span data-zh>一篇论文被 <em>XXX 2025</em> 接收（Oral）。</span>
+        </span>
+      </li>
+      <li>
+        <span class="news-date">2024.11</span>
+        <span>
+          <span data-en>Received the National Scholarship.</span>
+          <span data-zh>获得国家奖学金。</span>
+        </span>
+      </li>
+      <li>
+        <span class="news-date">2024.06</span>
+        <span>
+          <span data-en>Started a research internship at XXX Lab.</span>
+          <span data-zh>在 XXX 研究院开始科研实习。</span>
+        </span>
+      </li>
+    </ul>
+  </section>
 
-<!-- ============================================================
-     Selected Publications  —  自动选取前 3 篇
-     ============================================================ -->
-<h2><span data-en>Selected Publications</span><span data-zh>代表性论文</span></h2>
-<ul class="pub-list">
-  {% assign selected = site.data.publications | slice: 0, 3 %}
-  {% for pub in selected %}
-    {% include publication.html pub=pub %}
-  {% endfor %}
-</ul>
-<p>
-  <a href="{{ '/publications/' | relative_url }}">
-    <span data-en>See all publications →</span>
-    <span data-zh>查看全部论文 →</span>
-  </a>
-</p>
+  <!-- =========================================================
+       PUBLICATIONS
+       ========================================================= -->
+  <section id="publications">
+    <h2><span data-en>Publications</span><span data-zh>论文发表</span></h2>
+    <p style="color:var(--muted); font-size:0.9rem; margin-top:-0.5em;">
+      <span data-en><sup>*</sup> equal contribution &middot; <strong>bold</strong> is me.</span>
+      <span data-zh><sup>*</sup> 表示共同作者 &middot; <strong>加粗</strong>为本人。</span>
+    </p>
+
+    {% assign pubs = site.data.publications | sort: 'year' | reverse %}
+    {% assign years = pubs | map: 'year' | uniq %}
+    {% for year in years %}
+      <div class="year-block">
+        <p class="year-label">{{ year }}</p>
+        <ul class="pub-list">
+          {% for pub in pubs %}{% if pub.year == year %}{% include publication.html pub=pub %}{% endif %}{% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </section>
+
+  <!-- =========================================================
+       EXPERIENCE (Education + Research + Service)
+       ========================================================= -->
+  <section id="experience">
+    <h2><span data-en>Experience</span><span data-zh>科研与经历</span></h2>
+
+    <p class="subsection-label"><span data-en>Education</span><span data-zh>教育背景</span></p>
+    <ul class="timeline">
+      {% for item in site.data.experience.education %}
+        <li>
+          <div class="t-date">
+            <span data-en>{{ item.period }}</span>
+            <span data-zh>{{ item.period_zh | default: item.period }}</span>
+          </div>
+          <div>
+            <p class="t-title">
+              <span data-en>{{ item.title.en }}</span>
+              <span data-zh>{{ item.title.zh | default: item.title.en }}</span>
+            </p>
+            <p class="t-org">
+              <span data-en>{{ item.org.en }}</span>
+              <span data-zh>{{ item.org.zh | default: item.org.en }}</span>
+            </p>
+            {% if item.desc %}
+              <p class="t-desc">
+                <span data-en>{{ item.desc.en }}</span>
+                <span data-zh>{{ item.desc.zh | default: item.desc.en }}</span>
+              </p>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p class="subsection-label"><span data-en>Research</span><span data-zh>科研经历</span></p>
+    <ul class="timeline">
+      {% for item in site.data.experience.research %}
+        <li>
+          <div class="t-date">
+            <span data-en>{{ item.period }}</span>
+            <span data-zh>{{ item.period_zh | default: item.period }}</span>
+          </div>
+          <div>
+            <p class="t-title">
+              <span data-en>{{ item.title.en }}</span>
+              <span data-zh>{{ item.title.zh | default: item.title.en }}</span>
+            </p>
+            <p class="t-org">
+              <span data-en>{{ item.org.en }}</span>
+              <span data-zh>{{ item.org.zh | default: item.org.en }}</span>
+            </p>
+            {% if item.desc %}
+              <p class="t-desc">
+                <span data-en>{{ item.desc.en }}</span>
+                <span data-zh>{{ item.desc.zh | default: item.desc.en }}</span>
+              </p>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p class="subsection-label"><span data-en>Academic Service</span><span data-zh>学术服务</span></p>
+    <ul class="timeline">
+      {% for item in site.data.experience.service %}
+        <li>
+          <div class="t-date">
+            <span data-en>{{ item.period }}</span>
+            <span data-zh>{{ item.period_zh | default: item.period }}</span>
+          </div>
+          <div>
+            <p class="t-title">
+              <span data-en>{{ item.title.en }}</span>
+              <span data-zh>{{ item.title.zh | default: item.title.en }}</span>
+            </p>
+            <p class="t-org">
+              <span data-en>{{ item.org.en }}</span>
+              <span data-zh>{{ item.org.zh | default: item.org.en }}</span>
+            </p>
+            {% if item.desc %}
+              <p class="t-desc">
+                <span data-en>{{ item.desc.en }}</span>
+                <span data-zh>{{ item.desc.zh | default: item.desc.en }}</span>
+              </p>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- =========================================================
+       HONORS
+       ========================================================= -->
+  <section id="honors">
+    <h2><span data-en>Honors &amp; Awards</span><span data-zh>荣誉奖项</span></h2>
+    {% assign honors = site.data.honors | sort: 'year' | reverse %}
+    <ul class="timeline">
+      {% for h in honors %}
+        <li>
+          <div class="t-date">{{ h.date | default: h.year }}</div>
+          <div>
+            <p class="t-title">
+              <span data-en>{{ h.title.en }}</span>
+              <span data-zh>{{ h.title.zh | default: h.title.en }}</span>
+              {% if h.tier %}<span class="t-tier"><span data-en>· {{ h.tier.en }}</span><span data-zh>· {{ h.tier.zh | default: h.tier.en }}</span></span>{% endif %}
+            </p>
+            <p class="t-org">
+              <span data-en>{{ h.org.en }}</span>
+              <span data-zh>{{ h.org.zh | default: h.org.en }}</span>
+            </p>
+            {% if h.desc %}
+              <p class="t-desc">
+                <span data-en>{{ h.desc.en }}</span>
+                <span data-zh>{{ h.desc.zh | default: h.desc.en }}</span>
+              </p>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- =========================================================
+       HOBBIES
+       ========================================================= -->
+  <section id="hobbies">
+    <h2><span data-en>Hobbies</span><span data-zh>兴趣爱好</span></h2>
+    <ul class="hobby-list">
+      {% for h in site.data.hobbies %}
+        <li>
+          <span class="h-title">
+            <span data-en>{{ h.title.en }}</span>
+            <span data-zh>{{ h.title.zh | default: h.title.en }}</span>
+          </span>
+          &nbsp;&middot;&nbsp;
+          <span class="h-desc">
+            <span data-en>{{ h.desc.en }}</span>
+            <span data-zh>{{ h.desc.zh | default: h.desc.en }}</span>
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+</article>

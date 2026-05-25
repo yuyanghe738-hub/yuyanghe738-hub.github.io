@@ -2,44 +2,41 @@
 #  Site Settings  —  编辑这里来更新你的基本信息
 # =====================================================================
 
-# 站点基本信息 / Site
 title:        "Your Name"
 title_zh:     "你的姓名"
-tagline:      "PhD Student · Research Area"
-tagline_zh:   "博士研究生 · 研究方向"
 description:  "Academic homepage of Your Name."
-url:          ""    # e.g. https://yourname.github.io
-baseurl:      ""    # 如果部署到 username.github.io/repo  填 "/repo"，否则留空
+url:          ""
+baseurl:      ""
 
 # 个人信息 / Profile
 author:
   name:           "Your Name"
   name_zh:        "你的姓名"
   email:          "your.email@example.com"
-  affiliation:    "Department of XXX, University of YYY"
-  affiliation_zh: "YYY 大学 XXX 系"
-  office:         "Room 000, Building Name"
-  office_zh:      "某某楼 000 室"
+  role:           "Undergraduate Student, Department of XXX"
+  role_zh:        "本科生，XXX 系"
+  affiliation:    "University of YYY · Honors Program"
+  affiliation_zh: "YYY 大学 · 荣誉学院"
   photo:          "/assets/img/profile.jpg"
 
-# 社交链接 / Social — 留空则不显示
-social:
-  github:   "yourusername"
-  scholar:  ""           # Google Scholar ID
-  orcid:    ""
-  linkedin: ""
-  twitter:  ""
-  zhihu:    ""
+# 顶部链接行 / Header link row  —  留空则不显示
+links:
+  email:   "your.email@example.com"
+  scholar: ""                  # 完整 URL，例如 https://scholar.google.com/citations?user=xxx
+  github:  "https://github.com/yuyanghe738-hub"
+  website: ""
+  arxiv:   ""
+  cv:      ""                  # 一份 PDF 的 URL，例如 /assets/cv.pdf
 
-# 站点导航 / Nav order
-nav:
-  - { url: "/",              en: "About",        zh: "关于" }
-  - { url: "/publications/", en: "Publications", zh: "论文" }
-  - { url: "/research/",     en: "Research",     zh: "科研" }
-  - { url: "/honors/",       en: "Honors",       zh: "荣誉" }
-  - { url: "/hobbies/",      en: "Hobbies",      zh: "兴趣" }
+# 单页内的目录锚点 / In-page TOC
+toc:
+  - { id: "about",        en: "About",        zh: "关于" }
+  - { id: "news",         en: "News",         zh: "动态" }
+  - { id: "publications", en: "Publications", zh: "论文" }
+  - { id: "experience",   en: "Experience",   zh: "经历" }
+  - { id: "honors",       en: "Honors",       zh: "荣誉" }
+  - { id: "hobbies",      en: "Hobbies",      zh: "兴趣" }
 
-# 构建设置 / Build
 markdown:    kramdown
 permalink:   pretty
 plugins:

@@ -1,32 +1,23 @@
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="{{ '/' | relative_url }}" class="brand">
-      <span data-en>{{ site.title }}</span>
-      <span data-zh>{{ site.title_zh }}</span>
-    </a>
-
-    <nav class="site-nav" aria-label="Primary">
-      {% for item in site.nav %}
-        {% assign current = false %}
-        {% if page.url == item.url %}{% assign current = true %}{% endif %}
-        <a href="{{ item.url | relative_url }}" class="nav-link{% if current %} active{% endif %}">
-          <span data-en>{{ item.en }}</span>
-          <span data-zh>{{ item.zh }}</span>
-        </a>
+<nav class="toc" aria-label="Sections">
+  <div class="toc-inner">
+    <ul class="toc-list">
+      {% for item in site.toc %}
+        <li>
+          <a href="#{{ item.id }}" data-toc="{{ item.id }}">
+            <span data-en>{{ item.en }}</span>
+            <span data-zh>{{ item.zh }}</span>
+          </a>
+        </li>
       {% endfor %}
-    </nav>
-
-    <div class="header-controls">
-      <button id="lang-toggle" class="icon-btn" aria-label="Toggle language" title="切换语言 / Switch language">
+    </ul>
+    <div class="toc-controls">
+      <button id="lang-toggle" class="mini-btn" aria-label="Toggle language" title="切换语言 / Switch language">
         <span data-en>中</span>
         <span data-zh>EN</span>
       </button>
-      <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
-        <i class="fa-regular fa-moon"></i>
-      </button>
-      <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Open menu">
-        <i class="fa-solid fa-bars"></i>
+      <button id="theme-toggle" class="mini-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon">◐</span>
       </button>
     </div>
   </div>
-</header>
+</nav>
