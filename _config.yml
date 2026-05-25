@@ -17,7 +17,7 @@ author:
   role_zh:        "本科生，XXX 系"
   affiliation:    "University of YYY · Honors Program"
   affiliation_zh: "YYY 大学 · 荣誉学院"
-  photo:          "/assets/img/profile.jpg"
+  photo:          ""  # 把皮卡丘 PNG 命名为 profile.jpg 放到 assets/img/，再把这里改成 "/assets/img/profile.jpg"
 
 # 顶部链接行 / Header link row  —  留空则不显示
 links:
