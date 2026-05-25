@@ -15,7 +15,7 @@
   --accent:     #8a1538;
 
   --font-serif:    'Crimson Pro', 'EB Garamond', Georgia, 'Times New Roman', serif;
-  --font-serif-zh: 'Noto Serif SC', 'Source Han Serif SC', 'PingFang SC', serif;
+  --font-zh:       'Noto Sans SC', 'PingFang SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
   --font-mono:     'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
 
   --measure: 720px;
@@ -48,7 +48,17 @@ body {
   -webkit-font-smoothing: antialiased;
   transition: background-color .2s ease, color .2s ease;
 }
-body.lang-zh { font-family: var(--font-serif-zh), var(--font-serif); }
+body.lang-zh {
+  font-family: var(--font-zh);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+body.lang-zh h1 { font-weight: 600; letter-spacing: 0.01em; }
+body.lang-zh h2 { font-weight: 500; }
+body.lang-zh h3 { font-weight: 600; }
+body.lang-zh .role-lines,
+body.lang-zh .pub-meta em,
+body.lang-zh .timeline .t-org { font-style: normal; }
 
 /* Language visibility ------------------------------------------------ */
 body.lang-en [data-zh] { display: none !important; }
@@ -198,21 +208,24 @@ main { padding-bottom: 5rem; }
 .about-block { overflow: hidden; }
 .about-photo {
   float: right;
-  width: 180px;
-  height: 180px;
-  margin: 0.4em 0 1em 1.5em;
-  background: var(--photo-bg);
+  width: 190px;
+  height: 190px;
+  margin: 0.4em 0 1em 1.6em;
+  background: linear-gradient(160deg, #fff5b1 0%, #ffe78b 100%);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 16px;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--muted-2);
-  font-size: 2rem;
+  color: #a06b00;
+  font-size: 2.4rem;
   font-family: var(--font-serif);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
+.about-photo .placeholder-emoji { font-size: 3rem; line-height: 1; }
+body.dark .about-photo { background: linear-gradient(160deg, #3a2f10 0%, #2a2410 100%); color: #ffd966; }
 .about-block p { margin: 0 0 0.9em; }
 
 /* News list ---------------------------------------------------------- */

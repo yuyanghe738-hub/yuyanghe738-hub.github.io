@@ -66,7 +66,7 @@ layout: default
       {% capture has_photo %}{{ site.author.photo | default: '' }}{% endcapture %}
       <div class="about-photo"
            {% if has_photo != '' %}style="background-image:url('{{ site.author.photo | relative_url }}')"{% endif %}>
-        {% if has_photo == '' %}<span>photo</span>{% endif %}
+        {% if has_photo == '' %}<span class="placeholder-emoji" title="把你的皮卡丘 PNG 放到 assets/img/profile.jpg 就会替换这里">⚡</span>{% endif %}
       </div>
 
       <div data-en>
