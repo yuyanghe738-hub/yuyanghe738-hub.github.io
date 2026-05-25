@@ -15,9 +15,11 @@
   --link-hover: #8a1538;
   --accent:     #8a1538;            /* deep claret, used sparingly */
 
-  --font-serif: 'EB Garamond', 'Crimson Pro', Georgia, 'Times New Roman', serif;
-  --font-ui:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono:  'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+  --font-serif:  'EB Garamond', 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --font-system: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display',
+                 'Helvetica Neue', 'PingFang SC', Helvetica, Arial, sans-serif;
+  --font-ui:     'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:   'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
 
   --measure: 680px;
 }
@@ -46,13 +48,15 @@ html {
 }
 body {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: 19px;
-  line-height: 1.75;
+  font-family: var(--font-system);
+  font-size: 16.5px;
+  line-height: 1.68;
   font-weight: 400;
+  letter-spacing: -0.003em;
   color: var(--fg);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   transition: background-color .2s ease, color .2s ease;
   cursor: default;
 }
@@ -61,29 +65,32 @@ body {
 
 /* Typography --------------------------------------------------------- */
 h1, h2, h3 {
-  font-family: var(--font-serif);
   color: var(--fg);
   margin: 0;
-  font-feature-settings: "kern", "liga", "dlig";
 }
 h1 {
-  font-size: 3.4rem;
+  font-family: var(--font-serif);
+  font-size: 3.6rem;
   font-weight: 500;
   line-height: 1.05;
-  letter-spacing: -0.018em;
-  margin: 0 0 0.55em;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em;
+  font-feature-settings: "kern", "liga", "dlig";
 }
 h2 {
-  font-size: 1.45rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
+  font-family: var(--font-system);
+  font-size: 1.32rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin: 3.2rem 0 1.2rem;
-  padding-bottom: 0.35em;
+  padding-bottom: 0.4em;
   border-bottom: 1px solid var(--rule);
 }
 h3 {
-  font-size: 1.05rem;
+  font-family: var(--font-system);
+  font-size: 1.02rem;
   font-weight: 600;
+  letter-spacing: -0.005em;
   margin: 1.4rem 0 0.3rem;
 }
 
@@ -178,21 +185,22 @@ main { padding-bottom: 3rem; }
 .hero { padding: 5.5rem 0 1rem; }
 .hero h1 { margin-bottom: 0.6rem; }
 .role-lines {
-  font-family: var(--font-serif);
-  font-size: 1.08rem;
-  font-style: italic;
+  font-family: var(--font-system);
+  font-size: 1.02rem;
+  font-weight: 400;
   color: var(--fg-soft);
   margin: 0 0 1.5rem;
-  line-height: 1.5;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
 }
 .role-lines .role-line { display: block; }
 
 .link-row {
-  font-size: 0.97rem;
+  font-family: var(--font-system);
+  font-size: 0.94rem;
   color: var(--muted);
   margin: 0 0 0.5rem;
-  font-family: var(--font-serif);
-  letter-spacing: 0.005em;
+  letter-spacing: -0.003em;
 }
 .link-row a {
   color: var(--fg);
