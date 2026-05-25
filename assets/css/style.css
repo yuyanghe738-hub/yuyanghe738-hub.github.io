@@ -5,13 +5,13 @@
 :root {
   --bg:         #fdfcf9;            /* warm off-white, like paper */
   --bg-pure:    #ffffff;
-  --fg:         #1a1818;
-  --fg-soft:    #38332e;
-  --muted:      #756f68;
-  --muted-2:    #b9b3aa;
-  --border:     #e9e3d8;
-  --rule:       #d8d2c5;
-  --link:       #1a1818;
+  --fg:         #0d0d0d;            /* near-black, max body contrast */
+  --fg-soft:    #2a2622;
+  --muted:      #6b655d;
+  --muted-2:    #a8a298;
+  --border:     #e2dccf;
+  --rule:       #cdc6b8;
+  --link:       #0d0d0d;
   --link-hover: #8a1538;
   --accent:     #8a1538;            /* deep claret, used sparingly */
 
@@ -49,16 +49,24 @@ html {
 body {
   margin: 0;
   font-family: var(--font-system);
-  font-size: 16.5px;
-  line-height: 1.68;
-  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 450;                       /* between Regular(400) and Medium(500) */
   letter-spacing: -0.003em;
   color: var(--fg);
   background: var(--bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Use subpixel rendering on light backgrounds — text appears bolder & sharper */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
   transition: background-color .2s ease, color .2s ease;
   cursor: default;
+}
+
+/* Dark mode benefits from grayscale antialiasing (light text on dark BG) */
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 420;
 }
 
 ::selection { background: rgba(138, 21, 56, 0.15); }
@@ -186,8 +194,8 @@ main { padding-bottom: 3rem; }
 .hero h1 { margin-bottom: 0.6rem; }
 .role-lines {
   font-family: var(--font-system);
-  font-size: 1.02rem;
-  font-weight: 400;
+  font-size: 1.04rem;
+  font-weight: 450;
   color: var(--fg-soft);
   margin: 0 0 1.5rem;
   line-height: 1.55;
