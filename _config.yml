@@ -34,8 +34,9 @@ toc:
 
 # Personal quote shown above the footer
 quote:
-  text:   "What we know is a drop, what we don't know is an ocean."
-  source: "Isaac Newton"
+  text:   "It rained for so many days, yet it did not wet me. The rainy season was within my heart — I had drenched myself."
+  source: "Sanmao"
+  work:   "The Rainy Season Will Not Come Again"
 
 # Cursor-follower image — set empty to disable
 cursor_pet: "/assets/img/profile.png"

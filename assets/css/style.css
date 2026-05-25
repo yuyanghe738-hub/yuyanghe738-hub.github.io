@@ -416,6 +416,16 @@ main { padding-bottom: 3rem; }
 }
 .quote-source::before { content: "\2014\00a0\00a0"; }
 
+.quote-work {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--muted);
+  margin-top: 0.45em;
+  letter-spacing: 0;
+}
+
 /* Footer ------------------------------------------------------------- */
 .site-footer {
   border-top: 1px solid var(--border);
