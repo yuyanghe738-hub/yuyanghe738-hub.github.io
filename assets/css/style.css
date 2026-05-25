@@ -195,17 +195,20 @@ main { padding-bottom: 3rem; }
 .mini-btn:hover { color: var(--fg); border-color: var(--border); background: var(--bg-pure); }
 
 /* Hero --------------------------------------------------------------- */
-.hero { padding: 5.5rem 0 1rem; }
-.hero h1 { margin-bottom: 0.75rem; }
+.hero { padding: 5.5rem 0 0; }
+.hero h1 { margin-bottom: 0.65rem; }
 .role-lines {
   font-family: var(--font-system);
   font-size: 1.04rem;
   font-weight: 450;
   color: var(--fg-soft);
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.85rem;
   line-height: 1.5;
   letter-spacing: -0.005em;
 }
+
+/* First section's heading sits closer to the hero block */
+.hero + section > h2 { margin-top: 1.6rem; }
 .role-lines .role-line { display: block; }
 
 .link-row {
