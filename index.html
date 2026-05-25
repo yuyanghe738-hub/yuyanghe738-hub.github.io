@@ -8,19 +8,10 @@ layout: default
        HERO — name, role, link row
        ========================================================= -->
   <header class="hero">
-    <h1>
-      <span data-en>{{ site.author.name }}</span>
-      <span data-zh>{{ site.author.name_zh }}</span>
-    </h1>
+    <h1>{{ site.author.name }}</h1>
     <p class="role-lines">
-      <span class="role-line">
-        <span data-en>{{ site.author.role }}</span>
-        <span data-zh>{{ site.author.role_zh }}</span>
-      </span>
-      <span class="role-line">
-        <span data-en>{{ site.author.affiliation }}</span>
-        <span data-zh>{{ site.author.affiliation_zh }}</span>
-      </span>
+      <span class="role-line">{{ site.author.role }}</span>
+      <span class="role-line">{{ site.author.affiliation }}</span>
     </p>
     <p class="link-row">
       {% assign first = true %}
@@ -31,7 +22,7 @@ layout: default
       {% endif %}
       {% if site.links.scholar %}
         {% unless first %}<span class="sep">|</span>{% endunless %}
-        <a href="{{ site.links.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="{{ site.links.scholar }}" target="_blank" rel="noopener">Google&nbsp;Scholar</a>
         {% assign first = false %}
       {% endif %}
       {% if site.links.github %}
@@ -51,7 +42,7 @@ layout: default
       {% endif %}
       {% if site.links.cv %}
         {% unless first %}<span class="sep">|</span>{% endunless %}
-        <a href="{{ site.links.cv }}" target="_blank" rel="noopener">CV (PDF)</a>
+        <a href="{{ site.links.cv }}" target="_blank" rel="noopener">CV&nbsp;(PDF)</a>
         {% assign first = false %}
       {% endif %}
     </p>
@@ -61,103 +52,55 @@ layout: default
        ABOUT
        ========================================================= -->
   <section id="about">
-    <h2><span data-en>About</span><span data-zh>关于我</span></h2>
-    <div class="about-block">
-      {% capture has_photo %}{{ site.author.photo | default: '' }}{% endcapture %}
-      <div class="about-photo {% if has_photo != '' %}with-photo{% endif %}">
-        {% if has_photo != '' %}
-          <img src="{{ site.author.photo | relative_url }}" alt="{{ site.author.name }}" />
-        {% else %}
-          <span class="placeholder-emoji" title="把你的皮卡丘 PNG 放到 assets/img/ 即可">⚡</span>
-        {% endif %}
-      </div>
-
-      <div data-en>
-        <p>
-          Hi! I am <strong>{{ site.author.name }}</strong>, a student at
-          <em>{{ site.author.affiliation }}</em>. My research focuses on
-          <strong>[your research area]</strong> &mdash; I am interested in
-          <em>[topic A]</em>, <em>[topic B]</em>, and how they can be combined to
-          tackle <em>[a real-world problem]</em>.
-        </p>
-        <p>
-          I enjoy turning messy real-world questions into clean mathematical
-          formulations, and I am always happy to chat about research, side
-          projects, or photography. Feel free to reach me at
-          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
-        </p>
-      </div>
-      <div data-zh>
-        <p>
-          你好！我是 <strong>{{ site.author.name_zh }}</strong>，目前就读于
-          <em>{{ site.author.affiliation_zh }}</em>。研究方向是
-          <strong>[你的研究方向]</strong>，对
-          <em>[方向 A]</em>、<em>[方向 B]</em>
-          以及它们如何解决 <em>[某类实际问题]</em> 颇感兴趣。
-        </p>
-        <p>
-          我喜欢把现实中混乱的问题抽象成简洁的数学模型。
-          欢迎通过邮件与我交流：
-          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>。
-        </p>
-      </div>
-    </div>
+    <h2>About</h2>
+    <p>
+      Hi! I am <strong>{{ site.author.name }}</strong>, a student at
+      <em>{{ site.author.affiliation }}</em>. My research focuses on
+      <strong>[your research area]</strong> &mdash; I am interested in
+      <em>[topic A]</em>, <em>[topic B]</em>, and how they can be combined to
+      tackle <em>[a real-world problem]</em>.
+    </p>
+    <p>
+      I enjoy turning messy real-world questions into clean mathematical
+      formulations, and I am always happy to chat about research, side
+      projects, or photography. Feel free to reach me at
+      <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
+    </p>
   </section>
 
   <!-- =========================================================
-       NEWS
+       NEWS  —  scrollable
        ========================================================= -->
   <section id="news">
-    <h2><span data-en>News</span><span data-zh>最近动态</span></h2>
+    <h2>News</h2>
     <ul class="news-list">
       <li>
         <span class="news-date">2025.03</span>
-        <span>
-          <span data-en>One paper accepted to <em>XXX 2025</em> (Oral).</span>
-          <span data-zh>一篇论文被 <em>XXX 2025</em> 接收（Oral）。</span>
-        </span>
+        <span>One paper accepted to <em>XXX 2025</em> (Oral).</span>
       </li>
       <li>
         <span class="news-date">2025.01</span>
-        <span>
-          <span data-en>Submitted a new manuscript to <em>YYY 2025</em>.</span>
-          <span data-zh>向 <em>YYY 2025</em> 投出一篇新稿。</span>
-        </span>
+        <span>Submitted a new manuscript to <em>YYY 2025</em>.</span>
       </li>
       <li>
         <span class="news-date">2024.11</span>
-        <span>
-          <span data-en>Received the National Scholarship.</span>
-          <span data-zh>获得国家奖学金。</span>
-        </span>
+        <span>Received the National Scholarship.</span>
       </li>
       <li>
         <span class="news-date">2024.09</span>
-        <span>
-          <span data-en>Returned from internship; started a new collaboration on agent systems.</span>
-          <span data-zh>结束实习返校，开启关于 agent 系统的新合作课题。</span>
-        </span>
+        <span>Returned from internship; started a new collaboration on agent systems.</span>
       </li>
       <li>
         <span class="news-date">2024.06</span>
-        <span>
-          <span data-en>Started a research internship at XXX Lab.</span>
-          <span data-zh>在 XXX 研究院开始科研实习。</span>
-        </span>
+        <span>Started a research internship at XXX Lab.</span>
       </li>
       <li>
         <span class="news-date">2024.03</span>
-        <span>
-          <span data-en>Gave a short talk at the department seminar.</span>
-          <span data-zh>在院系组会做一次小报告。</span>
-        </span>
+        <span>Gave a short talk at the department seminar.</span>
       </li>
       <li>
         <span class="news-date">2023.09</span>
-        <span>
-          <span data-en>Started Ph.D. studies at <em>{{ site.author.affiliation }}</em>.</span>
-          <span data-zh>开始在 <em>{{ site.author.affiliation_zh }}</em> 攻读博士。</span>
-        </span>
+        <span>Started Ph.D. studies at <em>{{ site.author.affiliation }}</em>.</span>
       </li>
     </ul>
   </section>
@@ -166,10 +109,9 @@ layout: default
        PUBLICATIONS
        ========================================================= -->
   <section id="publications">
-    <h2><span data-en>Publications</span><span data-zh>论文发表</span></h2>
-    <p style="color:var(--muted); font-size:0.9rem; margin-top:-0.5em;">
-      <span data-en><sup>*</sup> equal contribution &middot; <strong>bold</strong> is me.</span>
-      <span data-zh><sup>*</sup> 表示共同作者 &middot; <strong>加粗</strong>为本人。</span>
+    <h2>Publications</h2>
+    <p style="color:var(--muted); font-size:0.88rem; margin-top:-0.35em;">
+      <sup>*</sup> equal contribution &middot; <strong>bold</strong> indicates the author.
     </p>
 
     {% assign pubs = site.data.publications | sort: 'year' | reverse %}
@@ -185,90 +127,48 @@ layout: default
   </section>
 
   <!-- =========================================================
-       EXPERIENCE (Education + Research + Service)
+       EXPERIENCE
        ========================================================= -->
   <section id="experience">
-    <h2><span data-en>Experience</span><span data-zh>科研与经历</span></h2>
+    <h2>Experience</h2>
 
-    <p class="subsection-label"><span data-en>Education</span><span data-zh>教育背景</span></p>
+    <p class="subsection-label">Education</p>
     <ul class="timeline">
       {% for item in site.data.experience.education %}
         <li>
-          <div class="t-date">
-            <span data-en>{{ item.period }}</span>
-            <span data-zh>{{ item.period_zh | default: item.period }}</span>
-          </div>
+          <div class="t-date">{{ item.period }}</div>
           <div>
-            <p class="t-title">
-              <span data-en>{{ item.title.en }}</span>
-              <span data-zh>{{ item.title.zh | default: item.title.en }}</span>
-            </p>
-            <p class="t-org">
-              <span data-en>{{ item.org.en }}</span>
-              <span data-zh>{{ item.org.zh | default: item.org.en }}</span>
-            </p>
-            {% if item.desc %}
-              <p class="t-desc">
-                <span data-en>{{ item.desc.en }}</span>
-                <span data-zh>{{ item.desc.zh | default: item.desc.en }}</span>
-              </p>
-            {% endif %}
+            <p class="t-title">{{ item.title }}</p>
+            <p class="t-org">{{ item.org }}</p>
+            {% if item.desc %}<p class="t-desc">{{ item.desc }}</p>{% endif %}
           </div>
         </li>
       {% endfor %}
     </ul>
 
-    <p class="subsection-label"><span data-en>Research</span><span data-zh>科研经历</span></p>
+    <p class="subsection-label">Research</p>
     <ul class="timeline">
       {% for item in site.data.experience.research %}
         <li>
-          <div class="t-date">
-            <span data-en>{{ item.period }}</span>
-            <span data-zh>{{ item.period_zh | default: item.period }}</span>
-          </div>
+          <div class="t-date">{{ item.period }}</div>
           <div>
-            <p class="t-title">
-              <span data-en>{{ item.title.en }}</span>
-              <span data-zh>{{ item.title.zh | default: item.title.en }}</span>
-            </p>
-            <p class="t-org">
-              <span data-en>{{ item.org.en }}</span>
-              <span data-zh>{{ item.org.zh | default: item.org.en }}</span>
-            </p>
-            {% if item.desc %}
-              <p class="t-desc">
-                <span data-en>{{ item.desc.en }}</span>
-                <span data-zh>{{ item.desc.zh | default: item.desc.en }}</span>
-              </p>
-            {% endif %}
+            <p class="t-title">{{ item.title }}</p>
+            <p class="t-org">{{ item.org }}</p>
+            {% if item.desc %}<p class="t-desc">{{ item.desc }}</p>{% endif %}
           </div>
         </li>
       {% endfor %}
     </ul>
 
-    <p class="subsection-label"><span data-en>Academic Service</span><span data-zh>学术服务</span></p>
+    <p class="subsection-label">Academic Service</p>
     <ul class="timeline">
       {% for item in site.data.experience.service %}
         <li>
-          <div class="t-date">
-            <span data-en>{{ item.period }}</span>
-            <span data-zh>{{ item.period_zh | default: item.period }}</span>
-          </div>
+          <div class="t-date">{{ item.period }}</div>
           <div>
-            <p class="t-title">
-              <span data-en>{{ item.title.en }}</span>
-              <span data-zh>{{ item.title.zh | default: item.title.en }}</span>
-            </p>
-            <p class="t-org">
-              <span data-en>{{ item.org.en }}</span>
-              <span data-zh>{{ item.org.zh | default: item.org.en }}</span>
-            </p>
-            {% if item.desc %}
-              <p class="t-desc">
-                <span data-en>{{ item.desc.en }}</span>
-                <span data-zh>{{ item.desc.zh | default: item.desc.en }}</span>
-              </p>
-            {% endif %}
+            <p class="t-title">{{ item.title }}</p>
+            <p class="t-org">{{ item.org }}</p>
+            {% if item.desc %}<p class="t-desc">{{ item.desc }}</p>{% endif %}
           </div>
         </li>
       {% endfor %}
@@ -279,7 +179,7 @@ layout: default
        HONORS
        ========================================================= -->
   <section id="honors">
-    <h2><span data-en>Honors &amp; Awards</span><span data-zh>荣誉奖项</span></h2>
+    <h2>Honors &amp; Awards</h2>
     {% assign honors = site.data.honors | sort: 'year' | reverse %}
     <ul class="timeline">
       {% for h in honors %}
@@ -287,20 +187,11 @@ layout: default
           <div class="t-date">{{ h.date | default: h.year }}</div>
           <div>
             <p class="t-title">
-              <span data-en>{{ h.title.en }}</span>
-              <span data-zh>{{ h.title.zh | default: h.title.en }}</span>
-              {% if h.tier %}<span class="t-tier"><span data-en>· {{ h.tier.en }}</span><span data-zh>· {{ h.tier.zh | default: h.tier.en }}</span></span>{% endif %}
+              {{ h.title }}
+              {% if h.tier %}<span class="t-tier">{{ h.tier }}</span>{% endif %}
             </p>
-            <p class="t-org">
-              <span data-en>{{ h.org.en }}</span>
-              <span data-zh>{{ h.org.zh | default: h.org.en }}</span>
-            </p>
-            {% if h.desc %}
-              <p class="t-desc">
-                <span data-en>{{ h.desc.en }}</span>
-                <span data-zh>{{ h.desc.zh | default: h.desc.en }}</span>
-              </p>
-            {% endif %}
+            <p class="t-org">{{ h.org }}</p>
+            {% if h.desc %}<p class="t-desc">{{ h.desc }}</p>{% endif %}
           </div>
         </li>
       {% endfor %}
@@ -311,22 +202,24 @@ layout: default
        HOBBIES
        ========================================================= -->
   <section id="hobbies">
-    <h2><span data-en>Hobbies</span><span data-zh>兴趣爱好</span></h2>
+    <h2>Hobbies</h2>
     <ul class="hobby-list">
       {% for h in site.data.hobbies %}
         <li>
-          <span class="h-title">
-            <span data-en>{{ h.title.en }}</span>
-            <span data-zh>{{ h.title.zh | default: h.title.en }}</span>
-          </span>
-          &nbsp;&middot;&nbsp;
-          <span class="h-desc">
-            <span data-en>{{ h.desc.en }}</span>
-            <span data-zh>{{ h.desc.zh | default: h.desc.en }}</span>
-          </span>
+          <span class="h-title">{{ h.title }}</span><span class="h-sep">·</span><span class="h-desc">{{ h.desc }}</span>
         </li>
       {% endfor %}
     </ul>
   </section>
+
+  <!-- =========================================================
+       QUOTE  —  personal motto
+       ========================================================= -->
+  {% if site.quote.text %}
+  <aside class="quote">
+    <p class="quote-text">{{ site.quote.text }}</p>
+    {% if site.quote.source %}<span class="quote-source">{{ site.quote.source }}</span>{% endif %}
+  </aside>
+  {% endif %}
 
 </article>

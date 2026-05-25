@@ -1,41 +1,44 @@
 # =====================================================================
-#  Site Settings  —  编辑这里来更新你的基本信息
+#  Site Settings  —  edit your info here
 # =====================================================================
 
 title:        "Your Name"
-title_zh:     "你的姓名"
 description:  "Academic homepage of Your Name."
 url:          ""
 baseurl:      ""
 
-# 个人信息 / Profile
+# Profile
 author:
-  name:           "Your Name"
-  name_zh:        "你的姓名"
-  email:          "your.email@example.com"
-  role:           "Undergraduate Student, Department of XXX"
-  role_zh:        "本科生，XXX 系"
-  affiliation:    "University of YYY · Honors Program"
-  affiliation_zh: "YYY 大学 · 荣誉学院"
-  photo:          "/assets/img/profile.png"
+  name:        "Your Name"
+  email:       "your.email@example.com"
+  role:        "Undergraduate Student, Department of XXX"
+  affiliation: "University of YYY · Honors Program"
 
-# 顶部链接行 / Header link row  —  留空则不显示
+# Header link row (leave any field empty to hide)
 links:
   email:   "your.email@example.com"
-  scholar: ""                  # 完整 URL，例如 https://scholar.google.com/citations?user=xxx
+  scholar: ""
   github:  "https://github.com/yuyanghe738-hub"
   website: ""
   arxiv:   ""
-  cv:      ""                  # 一份 PDF 的 URL，例如 /assets/cv.pdf
+  cv:      ""
 
-# 单页内的目录锚点 / In-page TOC
+# In-page TOC (anchor IDs into the single page)
 toc:
-  - { id: "about",        en: "About",        zh: "关于" }
-  - { id: "news",         en: "News",         zh: "动态" }
-  - { id: "publications", en: "Publications", zh: "论文" }
-  - { id: "experience",   en: "Experience",   zh: "经历" }
-  - { id: "honors",       en: "Honors",       zh: "荣誉" }
-  - { id: "hobbies",      en: "Hobbies",      zh: "兴趣" }
+  - { id: "about",        label: "About"        }
+  - { id: "news",         label: "News"         }
+  - { id: "publications", label: "Publications" }
+  - { id: "experience",   label: "Experience"   }
+  - { id: "honors",       label: "Honors"       }
+  - { id: "hobbies",      label: "Hobbies"      }
+
+# Personal quote shown above the footer
+quote:
+  text:   "What we know is a drop, what we don't know is an ocean."
+  source: "Isaac Newton"
+
+# Cursor-follower image — set empty to disable
+cursor_pet: "/assets/img/profile.png"
 
 markdown:    kramdown
 permalink:   pretty

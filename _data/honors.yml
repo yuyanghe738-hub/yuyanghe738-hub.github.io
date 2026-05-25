@@ -1,61 +1,29 @@
 # =====================================================================
-#  荣誉奖项 / Honors & Awards
-#  字段说明：
-#    year       : 获奖年份（数字，用于排序）
-#    date       : 显示用日期文本（可写成 2024 或 2024.06 等）
-#    title      : 奖项名称
-#    org        : 颁发机构
-#    tier       : 国家级 / 省级 / 校级 / National / Provincial / University，可不填
-#    desc       : 简短描述（可选）
+#  Honors & Awards  —  newest first by year.
+#  Optional: tier (e.g. National, Provincial, University), desc.
 # =====================================================================
 
-- year: 2024
-  date: "2024"
-  title:
-    en: "National Scholarship"
-    zh: "国家奖学金"
-  org:
-    en: "Ministry of Education, China"
-    zh: "中华人民共和国教育部"
-  tier:
-    en: "National"
-    zh: "国家级"
-  desc:
-    en: "Awarded to top 1% of graduate students nationwide."
-    zh: "授予全国研究生中前 1% 的学生。"
+- year:  2024
+  date:  "2024"
+  title: "National Scholarship"
+  org:   "Ministry of Education, China"
+  tier:  "National"
+  desc:  "Awarded to top 1% of graduate students nationwide."
 
-- year: 2024
-  date: "2024.06"
-  title:
-    en: "Outstanding Graduate"
-    zh: "优秀毕业生"
-  org:
-    en: "Your University"
-    zh: "某某大学"
-  tier:
-    en: "University"
-    zh: "校级"
+- year:  2024
+  date:  "2024.06"
+  title: "Outstanding Graduate"
+  org:   "Your University"
+  tier:  "University"
 
-- year: 2023
-  date: "2023"
-  title:
-    en: "First Prize, XXX Competition"
-    zh: "某某竞赛一等奖"
-  org:
-    en: "China Association for XXX"
-    zh: "中国 XXX 学会"
-  tier:
-    en: "National"
-    zh: "国家级"
+- year:  2023
+  date:  "2023"
+  title: "First Prize, XXX Competition"
+  org:   "China Association for XXX"
+  tier:  "National"
 
-- year: 2022
-  date: "2022"
-  title:
-    en: "Academic Scholarship (First Class)"
-    zh: "一等学业奖学金"
-  org:
-    en: "Your University"
-    zh: "某某大学"
-  tier:
-    en: "University"
-    zh: "校级"
+- year:  2022
+  date:  "2022"
+  title: "Academic Scholarship (First Class)"
+  org:   "Your University"
+  tier:  "University"

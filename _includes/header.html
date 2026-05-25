@@ -2,22 +2,11 @@
   <div class="toc-inner">
     <ul class="toc-list">
       {% for item in site.toc %}
-        <li>
-          <a href="#{{ item.id }}" data-toc="{{ item.id }}">
-            <span data-en>{{ item.en }}</span>
-            <span data-zh>{{ item.zh }}</span>
-          </a>
-        </li>
+        <li><a href="#{{ item.id }}" data-toc="{{ item.id }}">{{ item.label }}</a></li>
       {% endfor %}
     </ul>
-    <div class="toc-controls">
-      <button id="lang-toggle" class="mini-btn" aria-label="Toggle language" title="切换语言 / Switch language">
-        <span data-en>中</span>
-        <span data-zh>EN</span>
-      </button>
-      <button id="theme-toggle" class="mini-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
-        <span class="theme-icon">◐</span>
-      </button>
-    </div>
+    <button id="theme-toggle" class="mini-btn" aria-label="Toggle dark mode" title="Toggle theme">
+      <span class="theme-icon">◐</span>
+    </button>
   </div>
 </nav>

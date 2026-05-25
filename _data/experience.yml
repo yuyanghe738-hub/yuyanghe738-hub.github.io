@@ -1,76 +1,34 @@
 # =====================================================================
-#  科研 / 工作 / 教育经历  —  Research, Work & Education timeline
-#  分为三组：education / research / service
+#  Experience  —  three buckets: education, research, service
 # =====================================================================
 
 education:
   - period: "2023 — Present"
-    period_zh: "2023 至今"
-    title:
-      en: "Ph.D. in XXX"
-      zh: "XXX 专业  博士研究生"
-    org:
-      en: "Your University"
-      zh: "某某大学"
-    desc:
-      en: "Advisor: Prof. XXX. Research focus: ..."
-      zh: "导师：XXX 教授。研究方向：……"
+    title:  "Ph.D. in XXX"
+    org:    "Your University"
+    desc:   "Advisor: Prof. XXX. Research focus: ..."
 
   - period: "2019 — 2023"
-    period_zh: "2019 — 2023"
-    title:
-      en: "B.Sc. in XXX"
-      zh: "XXX 专业  学士"
-    org:
-      en: "Your Undergraduate University"
-      zh: "某某大学"
-    desc:
-      en: "GPA: 3.9/4.0, Ranked 1/120."
-      zh: "GPA 3.9/4.0，专业排名 1/120。"
+    title:  "B.Sc. in XXX"
+    org:    "Your Undergraduate University"
+    desc:   "GPA: 3.9/4.0, ranked 1/120."
 
 research:
   - period: "2024.06 — 2024.09"
-    period_zh: "2024.06 — 2024.09"
-    title:
-      en: "Research Intern"
-      zh: "科研实习生"
-    org:
-      en: "XXX Research Lab"
-      zh: "XXX 研究院"
-    desc:
-      en: "Worked on a project about ..., mentored by Dr. XXX."
-      zh: "在 XXX 博士指导下从事 …… 方向的研究。"
+    title:  "Research Intern"
+    org:    "XXX Research Lab"
+    desc:   "Worked on ..., mentored by Dr. XXX."
 
   - period: "2022 — 2023"
-    period_zh: "2022 — 2023"
-    title:
-      en: "Undergraduate Research Project"
-      zh: "本科生科研训练 (URP)"
-    org:
-      en: "Your Undergraduate University"
-      zh: "某某大学"
-    desc:
-      en: "Topic: ... Led a team of 3 students, resulting in one first-author paper."
-      zh: "课题：……。担任组长，带领 3 人小组完成研究，发表一作论文一篇。"
+    title:  "Undergraduate Research Project"
+    org:    "Your Undergraduate University"
+    desc:   "Led a 3-student team; resulted in one first-author paper."
 
 service:
   - period: "2024 — Present"
-    period_zh: "2024 至今"
-    title:
-      en: "Reviewer"
-      zh: "审稿人"
-    org:
-      en: "NeurIPS, ICML, CVPR"
-      zh: "NeurIPS, ICML, CVPR"
-    desc:
-      en: "Conference reviewer."
-      zh: "会议审稿人。"
+    title:  "Reviewer"
+    org:    "NeurIPS, ICML, CVPR"
 
   - period: "2023 — 2024"
-    period_zh: "2023 — 2024"
-    title:
-      en: "Teaching Assistant"
-      zh: "助教"
-    org:
-      en: "Course Name, Your University"
-      zh: "某某课程，某某大学"
+    title:  "Teaching Assistant"
+    org:    "Course Name, Your University"

@@ -1,8 +1,5 @@
 <li class="pub">
-  <p class="pub-title">
-    <span data-en>{{ include.pub.title.en }}</span>
-    <span data-zh>{{ include.pub.title.zh | default: include.pub.title.en }}</span>
-  </p>
+  <p class="pub-title">{{ include.pub.title }}</p>
   <p class="pub-meta">
     {% assign authors = include.pub.authors | split: ';' %}
     {% for a in authors %}
@@ -10,17 +7,16 @@
       {% if name contains '**' %}<span class="me">{{ name | remove: '**' }}</span>{% else %}{{ name }}{% endif %}{% unless forloop.last %}, {% endunless %}
     {% endfor %}
     <br/>
-    <em>
-      <span data-en>{{ include.pub.venue.en }}</span><span data-zh>{{ include.pub.venue.zh | default: include.pub.venue.en }}</span>, {{ include.pub.year }}
-    </em>{% if include.pub.badge %} <span class="pub-tag">{{ include.pub.badge }}</span>{% endif %}
+    <em>{{ include.pub.venue }}</em>, {{ include.pub.year }}{% if include.pub.badge %} <span class="pub-tag">{{ include.pub.badge }}</span>{% endif %}
   </p>
   {% if include.pub.pdf or include.pub.arxiv or include.pub.code or include.pub.project or include.pub.bibtex %}
     <p class="pub-links">
-      {% if include.pub.pdf     %}<a href="{{ include.pub.pdf }}"     target="_blank" rel="noopener">PDF</a>{% endif %}
-      {% if include.pub.arxiv   %}{% if include.pub.pdf %} / {% endif %}<a href="{{ include.pub.arxiv }}"   target="_blank" rel="noopener">arXiv</a>{% endif %}
-      {% if include.pub.code    %} / <a href="{{ include.pub.code }}"    target="_blank" rel="noopener">Code</a>{% endif %}
-      {% if include.pub.project %} / <a href="{{ include.pub.project }}" target="_blank" rel="noopener">Project</a>{% endif %}
-      {% if include.pub.bibtex  %} / <a href="{{ include.pub.bibtex }}"  target="_blank" rel="noopener">BibTeX</a>{% endif %}
+      {% assign sep = '' %}
+      {% if include.pub.pdf     %}{{ sep }}<a href="{{ include.pub.pdf }}"     target="_blank" rel="noopener">PDF</a>{% assign sep = ' / ' %}{% endif %}
+      {% if include.pub.arxiv   %}{{ sep }}<a href="{{ include.pub.arxiv }}"   target="_blank" rel="noopener">arXiv</a>{% assign sep = ' / ' %}{% endif %}
+      {% if include.pub.code    %}{{ sep }}<a href="{{ include.pub.code }}"    target="_blank" rel="noopener">Code</a>{% assign sep = ' / ' %}{% endif %}
+      {% if include.pub.project %}{{ sep }}<a href="{{ include.pub.project }}" target="_blank" rel="noopener">Project</a>{% assign sep = ' / ' %}{% endif %}
+      {% if include.pub.bibtex  %}{{ sep }}<a href="{{ include.pub.bibtex }}"  target="_blank" rel="noopener">BibTeX</a>{% endif %}
     </p>
   {% endif %}
 </li>

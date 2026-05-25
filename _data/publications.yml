@@ -1,56 +1,28 @@
 # =====================================================================
-#  论文列表 / Publications
-#  按发表年份倒序排列，year 用于分组显示
-#  字段说明：
-#    title    : 论文标题（en + zh，zh 可与 en 相同）
-#    authors  : 作者列表，用 ; 分隔，自己用 **包围 会高亮显示
-#    venue    : 期刊 / 会议名称
-#    year     : 发表年份（数字）
-#    type     : journal / conference / preprint / workshop
-#    badge    : 角标（例如 Oral, Best Paper, CCF-A）
-#    pdf      : PDF 链接
-#    code     : 代码链接
-#    arxiv    : arXiv 链接
-#    project  : 项目主页
-#    bibtex   : BibTeX 链接
-#    image    : 论文缩略图路径（可选，放在 /assets/img/）
+#  Publications  —  newest first by year. Wrap your own name in **...**.
+#  Optional fields per entry:
+#    badge   — small tag (e.g. Oral, Best Paper, CCF-A)
+#    pdf, arxiv, code, project, bibtex — any URL
 # =====================================================================
 
-- title:
-    en: "An Example Paper Title on Some Interesting Topic"
-    zh: "一篇关于某个有趣方向的示例论文"
+- title:   "An Example Paper Title on Some Interesting Topic"
   authors: "**Your Name**; Collaborator A; Collaborator B; Senior Advisor"
-  venue:
-    en: "Conference on Something Important (XXX)"
-    zh: "某重要国际会议 (XXX)"
-  year: 2025
-  type: conference
-  badge: "Oral"
-  arxiv: "https://arxiv.org/abs/0000.00000"
-  pdf: "#"
-  code: "https://github.com/yourusername/repo"
-  project: "#"
+  venue:   "Conference on Something Important (XXX)"
+  year:    2025
+  badge:   "Oral"
+  arxiv:   "https://arxiv.org/abs/0000.00000"
+  pdf:     "#"
+  code:    "https://github.com/yourusername/repo"
 
-- title:
-    en: "Another Representative Work on a Different Direction"
-    zh: "另一项代表性工作"
+- title:   "Another Representative Work on a Different Direction"
   authors: "Collaborator C; **Your Name**; Senior Advisor"
-  venue:
-    en: "Journal of Interesting Research"
-    zh: "某重要期刊"
-  year: 2024
-  type: journal
-  badge: "CCF-A"
-  pdf: "#"
-  bibtex: "#"
+  venue:   "Journal of Interesting Research"
+  year:    2024
+  badge:   "CCF-A"
+  pdf:     "#"
 
-- title:
-    en: "Preliminary Investigation of a New Idea"
-    zh: "对一个新想法的初步研究"
+- title:   "Preliminary Investigation of a New Idea"
   authors: "**Your Name**; Collaborator D"
-  venue:
-    en: "Workshop at XXX"
-    zh: "XXX 会议研讨会"
-  year: 2023
-  type: workshop
-  pdf: "#"
+  venue:   "Workshop at XXX"
+  year:    2023
+  pdf:     "#"

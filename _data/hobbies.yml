@@ -1,52 +1,21 @@
 # =====================================================================
-#  兴趣爱好 / Hobbies
-#  icon 使用 Font Awesome 图标类名 (https://fontawesome.com/icons)
+#  Hobbies — one line per item: title · short description
 # =====================================================================
 
-- icon: "fa-solid fa-camera"
-  title:
-    en: "Photography"
-    zh: "摄影"
-  desc:
-    en: "Landscape and street photography, mostly with a Fujifilm X-T5."
-    zh: "热衷风光与街头摄影，常用富士 X-T5。"
+- title: "Photography"
+  desc:  "Landscape and street, mostly with a Fujifilm X-T5."
 
-- icon: "fa-solid fa-person-hiking"
-  title:
-    en: "Hiking"
-    zh: "徒步"
-  desc:
-    en: "Enjoy long-distance hiking and exploring new trails on weekends."
-    zh: "喜欢长距离徒步，周末爱探索新的路线。"
+- title: "Hiking"
+  desc:  "Long-distance routes and weekend trail-hunting."
 
-- icon: "fa-solid fa-book"
-  title:
-    en: "Reading"
-    zh: "阅读"
-  desc:
-    en: "Mostly history, philosophy, and popular science."
-    zh: "主要阅读历史、哲学与科普类书籍。"
+- title: "Reading"
+  desc:  "History, philosophy, and popular science."
 
-- icon: "fa-solid fa-guitar"
-  title:
-    en: "Music"
-    zh: "音乐"
-  desc:
-    en: "Acoustic guitar enthusiast, occasionally compose simple melodies."
-    zh: "民谣吉他爱好者，偶尔自己写一些小曲。"
+- title: "Music"
+  desc:  "Acoustic guitar; occasionally compose small pieces."
 
-- icon: "fa-solid fa-mug-hot"
-  title:
-    en: "Coffee"
-    zh: "咖啡"
-  desc:
-    en: "Home barista — V60 and espresso geek."
-    zh: "家庭咖啡师，沉迷 V60 手冲和意式浓缩。"
+- title: "Coffee"
+  desc:  "Home barista — V60 and espresso geek."
 
-- icon: "fa-solid fa-code"
-  title:
-    en: "Side Projects"
-    zh: "小项目"
-  desc:
-    en: "Build small open-source tools when an itch strikes."
-    zh: "灵感来了就写一些小开源工具。"
+- title: "Side Projects"
+  desc:  "Small open-source tools when an itch strikes."
