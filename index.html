@@ -57,13 +57,18 @@ layout: default
       Hi! I am <strong>Yuyang He</strong>, an undergraduate student at the
       <em>School of Materials Science and Engineering</em>,
       <em>Huazhong University of Science and Technology (HUST)</em>.
-      My research interests lie in <strong>[your research area]</strong>,
-      with a particular focus on <em>[topic A]</em> and <em>[topic B]</em>.
+      I have a deep passion for <strong>physics</strong> and aspire to pursue
+      a <strong>Ph.D.</strong> in the field. My research interests lie in
+      <em>condensed matter physics</em> &mdash; particularly
+      <em>quantum computing</em>, <em>quantum information</em>, and
+      <em>topological structures</em>.
     </p>
     <p>
-      I enjoy turning messy real-world problems into clean, well-posed
-      questions. I am always happy to chat about research, side projects,
-      or photography. Feel free to reach me at
+      I approach life with energy and curiosity. I enjoy tracing ideas back to
+      first principles and exploring the history of science &mdash; there is a
+      quiet joy in understanding where ideas come from. I look forward to
+      challenging myself, learning continuously, and thinking independently.
+      Feel free to reach me at
       <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
     </p>
   </section>
@@ -73,36 +78,9 @@ layout: default
        ========================================================= -->
   <section id="news">
     <h2>News</h2>
-    <ul class="news-list">
-      <li>
-        <span class="news-date">2025.03</span>
-        <span>One paper accepted to <em>XXX 2025</em> (Oral).</span>
-      </li>
-      <li>
-        <span class="news-date">2025.01</span>
-        <span>Submitted a new manuscript to <em>YYY 2025</em>.</span>
-      </li>
-      <li>
-        <span class="news-date">2024.11</span>
-        <span>Received the National Scholarship.</span>
-      </li>
-      <li>
-        <span class="news-date">2024.09</span>
-        <span>Returned from internship; started a new collaboration on agent systems.</span>
-      </li>
-      <li>
-        <span class="news-date">2024.06</span>
-        <span>Started a research internship at XXX Lab.</span>
-      </li>
-      <li>
-        <span class="news-date">2024.03</span>
-        <span>Gave a short talk at the department seminar.</span>
-      </li>
-      <li>
-        <span class="news-date">2023.09</span>
-        <span>Started Ph.D. studies at <em>{{ site.author.affiliation }}</em>.</span>
-      </li>
-    </ul>
+    <p style="color: var(--muted); font-style: italic; margin-top: 0.4em;">
+      Nothing to share yet &mdash; stay tuned.
+    </p>
   </section>
 
   <!-- =========================================================
@@ -110,20 +88,25 @@ layout: default
        ========================================================= -->
   <section id="publications">
     <h2>Publications</h2>
-    <p style="color:var(--muted); font-size:0.88rem; margin-top:-0.35em;">
-      <sup>*</sup> equal contribution &middot; <strong>bold</strong> indicates the author.
-    </p>
-
     {% assign pubs = site.data.publications | sort: 'year' | reverse %}
-    {% assign years = pubs | map: 'year' | uniq %}
-    {% for year in years %}
-      <div class="year-block">
-        <p class="year-label">{{ year }}</p>
-        <ul class="pub-list">
-          {% for pub in pubs %}{% if pub.year == year %}{% include publication.html pub=pub %}{% endif %}{% endfor %}
-        </ul>
-      </div>
-    {% endfor %}
+    {% if pubs.size > 0 %}
+      <p style="color:var(--muted); font-size:0.88rem; margin-top:-0.35em;">
+        <sup>*</sup> equal contribution &middot; <strong>bold</strong> indicates the author.
+      </p>
+      {% assign years = pubs | map: 'year' | uniq %}
+      {% for year in years %}
+        <div class="year-block">
+          <p class="year-label">{{ year }}</p>
+          <ul class="pub-list">
+            {% for pub in pubs %}{% if pub.year == year %}{% include publication.html pub=pub %}{% endif %}{% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p style="color: var(--muted); font-style: italic; margin-top: 0.4em;">
+        Forthcoming &mdash; stay tuned.
+      </p>
+    {% endif %}
   </section>
 
   <!-- =========================================================

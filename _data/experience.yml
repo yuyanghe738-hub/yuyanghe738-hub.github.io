@@ -4,25 +4,20 @@
 
 education:
   - period: "2023 — Present"
-    title:  "Ph.D. in XXX"
-    org:    "Your University"
-    desc:   "Advisor: Prof. XXX. Research focus: ..."
-
-  - period: "2019 — 2023"
-    title:  "B.Sc. in XXX"
-    org:    "Your Undergraduate University"
-    desc:   "GPA: 3.9/4.0, ranked 1/120."
+    title:  "B.Eng. in Materials Science and Engineering"
+    org:    "Huazhong University of Science and Technology (HUST)"
+    desc:   ""
 
 research:
-  - period: "2024.06 — 2024.09"
-    title:  "Research Intern"
-    org:    "XXX Research Lab"
-    desc:   "Worked on ..., mentored by Dr. XXX."
+  - period: "Dec 2025 — Aug 2026"
+    title:  "Undergraduate Research Training (URP)"
+    org:    "HUST · School of Materials Science and Engineering"
+    desc:   "Topic: Low-Frequency Noise Measurement of Thermistors. Supervised by Prof. Shaobo Qu."
 
-  - period: "2022 — 2023"
-    title:  "Undergraduate Research Project"
-    org:    "Your Undergraduate University"
-    desc:   "Led a 3-student team; resulted in one first-author paper."
+  - period: "May 2025 — Apr 2026"
+    title:  "Undergraduate Innovation Training Program"
+    org:    "HUST · School of Materials Science and Engineering"
+    desc:   "Supervised by Prof. Yuan Li."
 
 service:
   - period: "2024 — Present"

@@ -1,28 +1,15 @@
 # =====================================================================
-#  Publications  —  newest first by year. Wrap your own name in **...**.
+#  Publications  —  empty for now. Newest first by year when added.
+#  Wrap your own name in **...** to bold-highlight it.
 #  Optional fields per entry:
 #    badge   — small tag (e.g. Oral, Best Paper, CCF-A)
 #    pdf, arxiv, code, project, bibtex — any URL
+#
+#  Example template (uncomment to add):
+#  - title:   "Your Paper Title"
+#    authors: "**Yuyang He**; Co-author A"
+#    venue:   "Conference Name"
+#    year:    2026
+#    arxiv:   "https://arxiv.org/abs/..."
+#    code:    "https://github.com/..."
 # =====================================================================
-
-- title:   "An Example Paper Title on Some Interesting Topic"
-  authors: "**Your Name**; Collaborator A; Collaborator B; Senior Advisor"
-  venue:   "Conference on Something Important (XXX)"
-  year:    2025
-  badge:   "Oral"
-  arxiv:   "https://arxiv.org/abs/0000.00000"
-  pdf:     "#"
-  code:    "https://github.com/yourusername/repo"
-
-- title:   "Another Representative Work on a Different Direction"
-  authors: "Collaborator C; **Your Name**; Senior Advisor"
-  venue:   "Journal of Interesting Research"
-  year:    2024
-  badge:   "CCF-A"
-  pdf:     "#"
-
-- title:   "Preliminary Investigation of a New Idea"
-  authors: "**Your Name**; Collaborator D"
-  venue:   "Workshop at XXX"
-  year:    2023
-  pdf:     "#"

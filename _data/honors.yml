@@ -1,29 +1,22 @@
 # =====================================================================
 #  Honors & Awards  —  newest first by year.
-#  Optional: tier (e.g. National, Provincial, University), desc.
+#  Optional: tier (e.g. International, National, University), desc.
 # =====================================================================
 
-- year:  2024
-  date:  "2024"
-  title: "National Scholarship"
-  org:   "Ministry of Education, China"
-  tier:  "National"
-  desc:  "Awarded to top 1% of graduate students nationwide."
+- year:  2026
+  date:  "2026.05"
+  title: "Meritorious Winner (M Prize)"
+  org:   "Mathematical Contest in Modeling (MCM), COMAP"
+  tier:  "International"
 
-- year:  2024
-  date:  "2024.06"
-  title: "Outstanding Graduate"
-  org:   "Your University"
+- year:  2026
+  date:  "2026.04"
+  title: "Silver Award, Qiushi Cup"
+  org:   "Huazhong University of Science and Technology"
   tier:  "University"
 
-- year:  2023
-  date:  "2023"
-  title: "First Prize, XXX Competition"
-  org:   "China Association for XXX"
-  tier:  "National"
-
-- year:  2022
-  date:  "2022"
-  title: "Academic Scholarship (First Class)"
-  org:   "Your University"
+- year:  2026
+  date:  "2026.03"
+  title: "Outstanding Youth League Cadre"
+  org:   "Huazhong University of Science and Technology"
   tier:  "University"

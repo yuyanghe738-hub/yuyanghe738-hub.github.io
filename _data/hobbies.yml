@@ -2,20 +2,23 @@
 #  Hobbies — one line per item: title · short description
 # =====================================================================
 
-- title: "Photography"
-  desc:  "Landscape and street, mostly with a Fujifilm X-T5."
-
-- title: "Hiking"
-  desc:  "Long-distance routes and weekend trail-hunting."
+- title: "Films"
+  desc:  "Drawn to films across genres and eras, especially those that ask thoughtful questions."
 
 - title: "Reading"
-  desc:  "History, philosophy, and popular science."
+  desc:  "Always with a book — history of science and philosophy in particular."
 
 - title: "Music"
-  desc:  "Acoustic guitar; occasionally compose small pieces."
+  desc:  "An eclectic listener; soundtracks often shape both mood and focus."
 
-- title: "Coffee"
-  desc:  "Home barista — V60 and espresso geek."
+- title: "Travel"
+  desc:  "New places, new cuisines, new perspectives."
 
-- title: "Side Projects"
-  desc:  "Small open-source tools when an itch strikes."
+- title: "Fitness"
+  desc:  "Regular workouts to stay sharp and grounded."
+
+- title: "Photography & Graphic Design"
+  desc:  "Composing what catches my eye; occasionally branching into visual design."
+
+- title: "Philosophy"
+  desc:  "Wrestling with the big questions whenever time allows."
