@@ -9,14 +9,14 @@ baseurl:      ""
 
 # Profile
 author:
-  name:        "Yuyang he"
+  name:        "Yuyang He"
   email:       "yuyanghe738@gmail.com"
-  role:        "Undergraduate Student, Department of XXX"
-  affiliation: "University of YYY · Honors Program"
+  role:        "Undergraduate Student, School of Materials Science and Engineering"
+  affiliation: "Huazhong University of Science and Technology (HUST)"
 
 # Header link row (leave any field empty to hide)
 links:
-  email:   "your.email@example.com"
+  email:   "yuyanghe738@gmail.com"
   scholar: ""
   github:  "https://github.com/yuyanghe738-hub"
   website: ""
