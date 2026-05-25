@@ -398,7 +398,17 @@ main { padding-bottom: 3rem; }
   line-height: 1;
   color: var(--muted-2);
   display: block;
-  margin-bottom: -0.1em;
+  margin-bottom: -0.15em;
+}
+.quote-text::after {
+  content: "\201D";
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: 3rem;
+  line-height: 0.4;
+  color: var(--muted-2);
+  display: block;
+  margin-top: 0.35em;
 }
 .quote-source {
   display: block;
