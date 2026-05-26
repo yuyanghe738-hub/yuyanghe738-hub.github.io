@@ -1,11 +1,10 @@
 # =====================================================================
-#  Publications  —  empty for now. Newest first by year when added.
-#  Wrap your own name in **...** to bold-highlight it.
-#  Optional fields per entry:
+#  Publications  —  newest first by year. Wrap your own name in **...**
+#  to bold-highlight it. Optional fields per entry:
 #    badge   — small tag (e.g. Oral, Best Paper, CCF-A)
 #    pdf, arxiv, code, project, bibtex — any URL
 #
-#  Example template (uncomment to add):
+#  Example template (copy below the [] and uncomment to add):
 #  - title:   "Your Paper Title"
 #    authors: "**Yuyang He**; Co-author A"
 #    venue:   "Conference Name"
@@ -13,3 +12,5 @@
 #    arxiv:   "https://arxiv.org/abs/..."
 #    code:    "https://github.com/..."
 # =====================================================================
+
+[]
