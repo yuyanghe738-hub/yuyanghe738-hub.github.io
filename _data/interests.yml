@@ -1,0 +1,13 @@
+# =====================================================================
+#  Research Interests  —  shown in the "Research" section.
+#  Each entry: title + one short sentence.
+# =====================================================================
+
+- title: "Condensed Matter Physics"
+  desc:  "Emergent phenomena and collective behaviour in many-body quantum systems."
+
+- title: "Quantum Computing & Quantum Information"
+  desc:  "Quantum algorithms, error correction, and physical realisations on solid-state platforms."
+
+- title: "Topological Phases of Matter"
+  desc:  "Topological invariants, edge states, and symmetry-protected phases."

@@ -74,6 +74,20 @@ layout: default
   </section>
 
   <!-- =========================================================
+       RESEARCH INTERESTS
+       ========================================================= -->
+  <section id="research">
+    <h2>Research Interests</h2>
+    <ul class="exp-list">
+      {% for item in site.data.interests %}
+        <li>
+          <strong>{{ item.title }}</strong>{% assign d = item.desc | strip %}{% if d != "" %} &mdash; {{ d }}{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- =========================================================
        NEWS  —  scrollable
        ========================================================= -->
   <section id="news">

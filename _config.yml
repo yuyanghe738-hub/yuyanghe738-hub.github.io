@@ -26,6 +26,7 @@ links:
 # In-page TOC (anchor IDs into the single page)
 toc:
   - { id: "about",        label: "About"        }
+  - { id: "research",     label: "Research"     }
   - { id: "news",         label: "News"         }
   - { id: "publications", label: "Publications" }
   - { id: "experience",   label: "Experience"   }
