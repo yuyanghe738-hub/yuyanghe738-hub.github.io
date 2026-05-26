@@ -12,8 +12,8 @@
   --border:     #e2dccf;
   --rule:       #cdc6b8;
   --link:       #0d0d0d;
-  --link-hover: #8a1538;
-  --accent:     #8a1538;            /* deep claret, used sparingly */
+  --link-hover: #0e7490;
+  --accent:     #0e7490;            /* deep cyan-blue, used sparingly */
 
   --font-display: 'Playfair Display', 'EB Garamond', Georgia, 'Times New Roman', serif;
   --font-serif:   'Playfair Display', 'EB Garamond', Georgia, 'Times New Roman', serif;
@@ -35,8 +35,8 @@ body.dark {
   --border:     #2c2823;
   --rule:       #3a342d;
   --link:       #ece6da;
-  --link-hover: #ff8a9a;
-  --accent:     #ff8a9a;
+  --link-hover: #5eb8d0;
+  --accent:     #5eb8d0;
 }
 
 /* Reset & base ------------------------------------------------------- */
