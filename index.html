@@ -149,6 +149,18 @@ layout: default
   </section>
 
   <!-- =========================================================
+       TECHNICAL SKILLS
+       ========================================================= -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul class="exp-list">
+      {% for s in site.data.skills %}
+        <li><strong>{{ s.category }}</strong> &mdash; {{ s.items }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- =========================================================
        HONORS
        ========================================================= -->
   <section id="honors">

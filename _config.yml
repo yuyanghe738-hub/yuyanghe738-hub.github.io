@@ -30,6 +30,7 @@ toc:
   - { id: "news",         label: "News"         }
   - { id: "publications", label: "Publications" }
   - { id: "experience",   label: "Experience"   }
+  - { id: "skills",       label: "Skills"       }
   - { id: "honors",       label: "Honors"       }
   - { id: "hobbies",      label: "Hobbies"      }
 

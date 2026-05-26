@@ -1,0 +1,20 @@
+# =====================================================================
+#  Technical Skills — grouped by category. Edit freely to add
+#  programming languages, frameworks, instruments, or other tools.
+# =====================================================================
+
+- category: "Languages"
+  items:   "Chinese (Native), English"
+
+- category: "Computational"
+  items:   "Deep Learning"
+
+# --- Example additions (uncomment & edit as your skill set grows) ---
+# - category: "Programming"
+#   items:   "Python, MATLAB, C/C++"
+#
+# - category: "Tools"
+#   items:   "LaTeX, Git, Linux, Origin"
+#
+# - category: "Experimental"
+#   items:   "XRD, SEM, DFT (VASP)"
