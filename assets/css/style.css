@@ -22,7 +22,7 @@
   --font-ui:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono:    'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
 
-  --measure: 680px;
+  --measure: 820px;
 }
 
 body.dark {
