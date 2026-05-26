@@ -116,43 +116,19 @@ layout: default
     <h2>Experience</h2>
 
     <p class="subsection-label">Education</p>
-    <ul class="timeline">
+    <ul class="exp-list">
       {% for item in site.data.experience.education %}
         <li>
-          <div class="t-date">{{ item.period }}</div>
-          <div>
-            <p class="t-title">{{ item.title }}</p>
-            <p class="t-org">{{ item.org }}</p>
-            {% if item.desc %}<p class="t-desc">{{ item.desc }}</p>{% endif %}
-          </div>
+          <strong>{{ item.title }}</strong>, {{ item.org }}{% assign d = item.desc | strip %}{% if d != "" %}. {{ d }}{% endif %},&nbsp;<span class="exp-date">{{ item.period }}</span>
         </li>
       {% endfor %}
     </ul>
 
     <p class="subsection-label">Research</p>
-    <ul class="timeline">
+    <ul class="exp-list">
       {% for item in site.data.experience.research %}
         <li>
-          <div class="t-date">{{ item.period }}</div>
-          <div>
-            <p class="t-title">{{ item.title }}</p>
-            <p class="t-org">{{ item.org }}</p>
-            {% if item.desc %}<p class="t-desc">{{ item.desc }}</p>{% endif %}
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
-
-    <p class="subsection-label">Academic Service</p>
-    <ul class="timeline">
-      {% for item in site.data.experience.service %}
-        <li>
-          <div class="t-date">{{ item.period }}</div>
-          <div>
-            <p class="t-title">{{ item.title }}</p>
-            <p class="t-org">{{ item.org }}</p>
-            {% if item.desc %}<p class="t-desc">{{ item.desc }}</p>{% endif %}
-          </div>
+          <strong>{{ item.title }}</strong>, {{ item.org }}{% assign d = item.desc | strip %}{% if d != "" %}. {{ d }}{% endif %}&nbsp;<span class="exp-date">{{ item.period }}</span>
         </li>
       {% endfor %}
     </ul>

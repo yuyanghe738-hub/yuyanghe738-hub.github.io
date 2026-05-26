@@ -364,6 +364,32 @@ main { padding-bottom: 3rem; }
   vertical-align: 0.15em;
 }
 
+/* Experience list — bullet style with inline trailing date ---------- */
+.exp-list {
+  list-style: disc outside;
+  padding: 0 0 0 1.3em;
+  margin: 0.55em 0 1.2em;
+}
+.exp-list li {
+  padding: 0.4em 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--fg);
+  border: none;
+}
+.exp-list li::marker {
+  color: var(--muted-2);
+}
+.exp-list strong {
+  font-weight: 600;
+  color: var(--fg);
+}
+.exp-list .exp-date {
+  color: var(--muted);
+  font-size: 0.93rem;
+  white-space: nowrap;
+}
+
 /* Hobbies — dense single line per item ----------------------------- */
 .hobby-list { list-style: none; padding: 0; margin: 0.3em 0 0; }
 .hobby-list li {
