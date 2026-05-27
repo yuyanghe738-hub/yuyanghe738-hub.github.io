@@ -19,6 +19,22 @@
       setTheme(document.body.classList.contains('dark') ? 'light' : 'dark'));
   }
 
+  /* ---------- Scroll-triggered fade-in ---------- */
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    document.body.classList.add('js-fade');
+    const fadeTargets = document.querySelectorAll('.hero, article > section, .quote');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    fadeTargets.forEach(el => fadeObserver.observe(el));
+  }
+
   /* ---------- TOC scrollspy ---------- */
   const tocLinks = Array.from(document.querySelectorAll('[data-toc]'));
   if (tocLinks.length && 'IntersectionObserver' in window) {

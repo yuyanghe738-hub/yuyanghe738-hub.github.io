@@ -507,6 +507,25 @@ main { padding-bottom: 3rem; }
   .cursor-pet { display: none !important; }
 }
 
+/* Scroll-triggered fade-in (only when JS is alive & motion allowed) - */
+@media (prefers-reduced-motion: no-preference) {
+  body.js-fade .hero,
+  body.js-fade article > section,
+  body.js-fade .quote {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(.16,.84,.32,1),
+                transform 0.7s cubic-bezier(.16,.84,.32,1);
+    will-change: opacity, transform;
+  }
+  body.js-fade .hero.is-visible,
+  body.js-fade article > section.is-visible,
+  body.js-fade .quote.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Responsive --------------------------------------------------------- */
 @media (max-width: 720px) {
   body { font-size: 17px; }
