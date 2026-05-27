@@ -25,11 +25,14 @@
     document.body.classList.add('js-fade');
     const fadeTargets = document.querySelectorAll('.hero, article > section, .quote');
     const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          fadeObserver.unobserve(entry.target);
-        }
+      // When multiple sections enter at once, stagger them by document order
+      const intersecting = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      intersecting.forEach((entry, i) => {
+        entry.target.style.transitionDelay = (i * 120) + 'ms';
+        entry.target.classList.add('is-visible');
+        fadeObserver.unobserve(entry.target);
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     fadeTargets.forEach(el => fadeObserver.observe(el));
